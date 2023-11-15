@@ -4,7 +4,7 @@
 
 ## Installation
 1. Install the [GH CLI tool](https://cli.github.com/)
-2. `gh extension install github-early-access/gh-attestation`
+2. Install this extension: `gh extension install github-early-access/gh-attestation`
 
 ## Usage
 The CLI extension itself offers detailed information about usage.

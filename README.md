@@ -57,4 +57,34 @@ Use "attestation [command] --help" for more information about a command.
 
 To see detailed usage information for a given subcommand:
 
-`gh attestation help <subcommand>` 
+`gh attestation help <subcommand>`
+
+## Trust root management
+
+GitHub is relying on [TUF](https://theupdateframework.io/) to securely
+deliver the trust root for our signing authority. It's natively
+integrated into the GitHub CLI [attestation extension](https://github.com/github-early-access/gh-attestation/). By using TUF the client will
+automatically update the trust root and verify that the local cache is
+both up-to-date and valid.
+
+Any client will come with a `root.json` file embedded. Once invoked
+the client creates a local cache in
+`~/.sigstore/root/tuf-repo.github.com`. If the local cache is removed,
+it will be recreated upon next invocation of any client.
+
+The actual TUF repository is located at
+`https://tuf-repo.github.com`. The repository is not indexed, but some
+important files are:
+* [1.root.json](https://tuf-repo.github.com/1.root.json)
+* [timestamp.json](https://tuf-repo.github.com/timestamp.json)
+
+You can at any point in time verify that the published repository, or
+the local cache is valid by running the following command.
+
+```shell
+$ gh attestation tuf-root-verify --mirror https://tuf-repo.github.com --root /path/to/1.root.json
+Successfully verified the TUF repository
+```
+
+The initial [root.json](tuf/1.root.json) is also available from this
+repository.

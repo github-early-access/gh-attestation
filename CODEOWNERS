@@ -1,5 +1,3 @@
-*     @github/package-security-reviewers @steiza
-
 # Limit codeowners for the production GitHub trusted root
 CODEOWNERS @trevrosen @kommendorkapten
 /tuf/ @trevrosen @kommendorkapten

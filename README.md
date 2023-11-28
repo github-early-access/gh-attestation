@@ -63,7 +63,7 @@ To see detailed usage information for a given subcommand:
 
 GitHub is relying on [TUF](https://theupdateframework.io/) to securely
 deliver the trust root for our signing authority. It's natively
-integrated into `attestation` extenstion. By using TUF the client will
+integrated into the GitHub CLI [attestation extension](https://github.com/github-early-access/gh-attestation/). By using TUF the client will
 automatically update the trust root and verify that the local cache is
 both up-to-date and valid.
 

@@ -1,8 +1,7 @@
 # gh-attestation
 
-**NOTE**: this is the location of the gh-attestation extension during Private Beta and is subject to change once the Private Beta is over.
-
-**OTHER NOTE**: command output in this README may look different from what is in the tool at runtime as we make minor changes.
+**NOTE**: this repository is now archived as the `gh-attestation` 
+extension has been integrated in the `gh` CLI as a core command. Upgrade at least [v2.47.0](https://github.com/cli/cli/releases/tag/v2.47.0) to use the `attestation` command. See the [build provenance private beta documentation](https://github.com/github-early-access/build-provenance-private-beta?tab=readme-ov-file#step-2-verify-the-signature) for more information on using the command.
 
 ## Installation
 1. Install the [GH CLI tool](https://cli.github.com/)
